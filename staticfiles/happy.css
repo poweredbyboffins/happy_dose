@@ -1,0 +1,122 @@
+html body {
+/*background-color: yellow;*/
+background: 
+radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
+background-color:#f4f004;
+background-size:60px 60px;
+}
+h2 {
+font-weight:bold;
+text-align : center;
+font-size: 40px;
+color : purple;
+}
+h3 {
+font-weight:bold;
+text-align : center;
+font-size: 30px;
+color : darkred;
+}
+a {text-decoration:none;}
+.bigh {
+margin-left:50px;
+color : red;
+font-size : 70px;
+/*background-color: green;*/
+float:left;
+font-weight:bold;
+}
+.small {
+margin-top:25px;
+font-size: 30px;
+float:left;
+font-weight:bold;
+}
+.smallend {
+margin-top:25px;
+font-size: 30px;
+float:left;
+font-weight:bold;
+}
+.biga {
+margin-left:50px;
+color : blue;
+font-size : 70px;
+clear:left;
+float:left;
+font-weight:bold;
+}
+.bigaa {
+margin-left:50px;
+color : magenta;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bigp {
+clear:left;
+margin-left:50px;
+color : purple;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bigpp {
+clear:left;
+margin-left:50px;
+color : mauve;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bigy {
+clear:left;
+margin-left:50px;
+color : black;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bigd {
+color : green;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bigo {
+color : goldenrod;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bigs {
+color : orange;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.bige {
+color : orchid;
+font-size : 70px;
+float:left;
+font-weight:bold;
+}
+.sign {
+width: 35px;
+height: 5px;
+background-color: black;
+margin: 6px 0;
+font-weight:bold;
+}
+.col1 {
+background-color: lightgreen;
+color: red;
+}
+.col2 {
+background-color: yellow;
+color: blue;
+}
+.col3 {
+background-color: lightblue;
+color: purple;
+}
