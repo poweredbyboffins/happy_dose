@@ -1,0 +1,49 @@
+<script type="text/javascript">
+function graph()
+{
+var lengthOfColors = ["29.47965973","45.35332267","70.29765013","90","120","150","180","210"]; 
+var colorCodes = ['purple','red','green','yellow','blue','red','green','cyan']; // the real arrays are much longers
+
+var c = document.getElementById('c');
+var context = c.getContext("2d");
+var centerx = context.canvas.width / 2;
+var centery = context.canvas.height / 2;
+
+    //e.preventDefault();
+
+    a = 3.0;
+    b = 3.0; //The user can define Cosinus and Sinus
+
+    context.clearRect(0, 0, 2000, 2000);
+    context.beginPath();
+    context.moveTo(centerx, centery);
+    // Temporarily store prev location
+    var x = centerx, y = centery, curIteration = 0;
+    for (var i = 0; i < lengthOfColors.length; i++) {
+        context.beginPath();
+        context.moveTo(x, y);
+
+        for (; curIteration < lengthOfColors[i]; curIteration++) {
+            angle = 0.1 * curIteration;//Angle of line rotation = 0.1
+            x = centerx + (a * angle) * Math.cos(angle);
+            y = centery + (b * angle) * Math.sin(angle);
+            context.lineTo(x, y);
+            console.log('x: ' + x + ', y: ' + y);
+        }
+
+        console.log(colorCodes[i]);
+        context.strokeStyle = colorCodes[i];
+        context.lineWidth=10;
+        context.stroke();//draw the path
+    }
+
+}
+</script>
+
+<body onload="graph()">
+<br>
+<br>
+<br>
+<br>
+<canvas id="c"></canvas>
+

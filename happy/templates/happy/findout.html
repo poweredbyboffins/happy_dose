@@ -1,0 +1,61 @@
+
+<html>
+<head>
+{% load static from staticfiles %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> 
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" style="background:lightgreen">
+  <div data-role="header" style="background:violet">
+    <div class="col3">
+    <h2>Choose a level which best describes your satisfaction with these aspects of your life</h2>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content" ">
+    <form method="post" action="/proc/">
+    {% csrf_token %}
+      <div class="col1">
+      <label for="newexp">Frequency of New or Interesting Experiences:</label>
+      <input type="range" name="newexp" id="newexp" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="heat">Health Eating and Diet:</label>
+      <input type="range" name="heat" id="heat" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">Friends:</label>
+      <input type="range" name="friends" id="friends" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">Family:</label>
+      <input type="range" name="family" id="family" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">Career:</label>
+      <input type="range" name="career" id="career" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">Status or Respect:</label>
+      <input type="range" name="respected" id="respected" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">Exercise and Fitness:</label>
+      <input type="range" name="exercises" id="exercises" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">Outdoor Activities:</label>
+      <input type="range" name="outdoor" id="outdoor" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <input type="submit" data-inline="true" value="Submit" data-highlight="true" data-theme="e" data-track-theme="c">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

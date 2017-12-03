@@ -1,0 +1,5 @@
+#heroku buildpacks:set heroku/python
+git add .
+git commit -am "Reinitialize$$"
+heroku git:remote -a thawing-refuge-24677
+git push -f heroku master

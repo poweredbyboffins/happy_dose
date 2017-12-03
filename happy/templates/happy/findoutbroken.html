@@ -1,0 +1,10 @@
+{# findout.html #}
+{% load floppyforms %}
+{% include "floppyforms/input.html" %}
+
+<form action="/prob/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <input type="submit" value="Add" />
+</form>

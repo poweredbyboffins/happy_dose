@@ -1,0 +1,103 @@
+html body {
+background-color: yellow;
+}
+h2 {
+text-align : center;
+font-size: 40px;
+color : purple;
+}
+h3 {
+text-align : center;
+font-size: 30px;
+color : orange;
+}
+a {text-decoration:none;}
+.bigh {
+margin-left:50px;
+color : red;
+font-size : 70px;
+/*background-color: green;*/
+float:left;
+}
+.small {
+margin-top:25px;
+font-size: 30px;
+float:left;
+}
+.smallend {
+margin-top:25px;
+font-size: 30px;
+float:left;
+}
+.biga {
+margin-left:50px;
+color : blue;
+font-size : 70px;
+clear:left;
+float:left;
+}
+.bigaa {
+margin-left:50px;
+color : magenta;
+font-size : 70px;
+float:left;
+}
+.bigp {
+clear:left;
+margin-left:50px;
+color : purple;
+font-size : 70px;
+float:left;
+}
+.bigpp {
+clear:left;
+margin-left:50px;
+color : mauve;
+font-size : 70px;
+float:left;
+}
+.bigy {
+clear:left;
+margin-left:50px;
+color : black;
+font-size : 70px;
+float:left;
+}
+.bigd {
+color : green;
+font-size : 70px;
+float:left;
+}
+.bigo {
+color : goldenrod;
+font-size : 70px;
+float:left;
+}
+.bigs {
+color : orange;
+font-size : 70px;
+float:left;
+}
+.bige {
+color : orchid;
+font-size : 70px;
+float:left;
+}
+.sign {
+width: 35px;
+height: 5px;
+background-color: black;
+margin: 6px 0;
+}
+.col1 {
+background-color: lightgreen;
+color: red;
+}
+.col2 {
+background-color: yellow;
+color: blue;
+}
+.col3 {
+background-color: lightblue;
+color: purple;
+}

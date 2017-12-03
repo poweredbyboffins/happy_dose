@@ -1,0 +1,61 @@
+
+<html>
+<head>
+{% load static from staticfiles %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> 
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" style="background:lightgreen">
+  <div data-role="header" style="background:violet">
+    <div class="col3">
+    <h2>Assess your current frame of mind</h2>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content" ">
+    <form method="post" action="/assess/">
+    {% csrf_token %}
+      <div class="col1">
+      <label for="newexp">How Happy Are You:</label>
+      <input type="range" name="happy" id="newexp" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="heat">How Depressed :</label>
+      <input type="range" name="dep" id="heat" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">How Frustrated:</label>
+      <input type="range" name="frust" id="friends" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">How Anxious:</label>
+      <input type="range" name="anx" id="family" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">How Angry:</label>
+      <input type="range" name="ang" id="career" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">How Stressed:</label>
+      <input type="range" name="stres" id="respected" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">How Tired:</label>
+      <input type="range" name="tire" id="exercises" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <div class="col1">
+      <label for="points">How Trapped:</label>
+      <input type="range" name="trap" id="outdoor" value="50" min="0" max="100" data-highlight="true" data-theme="e" data-track-theme="c">
+      </div>
+      <input type="submit" data-inline="true" value="Submit" data-highlight="true" data-theme="e" data-track-theme="c">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
