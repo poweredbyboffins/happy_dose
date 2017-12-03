@@ -33,9 +33,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')), 
     url(r'^signup/$', views.signup, name='signup'),
+    url(r'^logout/$', views.logout_view, name='logout'),
     url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
 ]
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'index'

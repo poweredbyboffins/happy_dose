@@ -22,7 +22,9 @@ from bokeh.io import show, output_file
 from bokeh.models import ColumnDataSource
 from bokeh.palettes import Spectral6
 from bokeh.plotting import figure
+from django.contrib.auth import logout
 
+@login_required
 def simple_chart(request):
     fruits = ['Dopamine', 'Oxytocin', 'Serotonin', 'Endorphine']
     counts = [9, 2, 3, 6]
@@ -58,28 +60,35 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'happy/signup.html', {'form': form})
 
+@login_required
 def findout(request):
     return render(request, 'happy/findout.html')
+@login_required
 def happy(request):
     return render(request, 'happy/happiness.html')
+@login_required
 def assess(request):
     form = Assess(request.POST)
+    uid=""
     formdata = {}
     if form.is_valid():
-       newexp = form.cleaned_data.get('newexp')
-       heat = form.cleaned_data.get('heat')
-       friends = form.cleaned_data.get('friends')
-       family = form.cleaned_data.get('family')
-       respected = form.cleaned_data.get('career')
-       exercises = form.cleaned_data.get('exercises')
-       outdoor = form.cleaned_data.get('outdoor')
-       formdata = {"newexp":newexp,"heat":heat,"friends":friends
-                  ,"family":family,"respected":respected,"exercises":exercises
-                  ,"outdoor":outdoor} 
-       save(formdata) 
+       happy = form.cleaned_data.get('happy')
+       dep = form.cleaned_data.get('dep')
+       frust = form.cleaned_data.get('frust')
+       anx = form.cleaned_data.get('anx')
+       anger = form.cleaned_data.get('anger')
+       stress = form.cleaned_data.get('stress')
+       tire = form.cleaned_data.get('tire')
+       trap = form.cleaned_data.get('trap')
+       formdata = {"happy":happy,"dep":dep,"frust":frust
+                  ,"anx":anx,"anger":anger,"stress":stress
+                  ,"tire":tire,"trap":trap} 
+       save(formdata,uid) 
     return render(request, 'happy/joyplot.html')
+@login_required
 def proc(request):
     form = FindOutForm(request.POST)
+    uid=""
     formdata = {}
     if form.is_valid():
        #form.save()
@@ -93,12 +102,17 @@ def proc(request):
        formdata = {"newexp":newexp,"heat":heat,"friends":friends
                   ,"family":family,"respected":respected,"exercises":exercises
                   ,"outdoor":outdoor} 
-       save(formdata) 
+       save(formdata,uid) 
     return render(request, 'happy/happiness.html')
-    
-def save(formdata):
+@login_required    
+def save(formdata,uid):
     findout = Findout()
     for key,value in formdata.items():
+        findout.userid=uid
         findout.facttype=key
         findout.value=value
         findout.save()
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'happy/logout.html')

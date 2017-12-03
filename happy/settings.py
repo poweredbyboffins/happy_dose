@@ -140,4 +140,7 @@ PROJECT_DIR=os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = (
 os.path.join(PROJECT_DIR, 'templates'),
 )
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'signup'
 
