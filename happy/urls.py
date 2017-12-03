@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django import views as dv
+from django.views import static as dv
 from happy import views
 from happy import settings
 
@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')), 
     url(r'^signup/$', views.signup, name='signup'),
-    url(r'^static/(?P<path>.*)$', dv.static.serve, {'document_root': settings.STATIC_ROOT})
+    url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
 ]
 
 LOGIN_URL = 'login'
