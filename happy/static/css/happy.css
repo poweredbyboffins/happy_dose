@@ -1,9 +1,10 @@
 html body {
-/*background-color: yellow;*/
 background: 
 radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
 background-color:#f4f004;
 background-size:60px 60px;
+height: 100%;
+min-height: 100%;
 }
 h2 {
 font-weight:bold;
@@ -119,4 +120,58 @@ color: blue;
 .col3 {
 background-color: lightblue;
 color: purple;
+}
+
+
+html body .container {
+
+height: 100%; 
+min-height: 100%;
+}
+
+
+.first {
+    float: left;
+    font-size : 30px;
+    color:white;
+    width: 20%;
+    height: 30%;
+    background-color: red;
+}
+
+.second{
+    float: left;
+    font-size : 30px;
+    color:white;
+    width: 20%;
+    height: 70%;
+    background-color: green;
+}
+
+
+.third{
+    float: right;
+    font-size : 30px;
+    color:white;
+    width: 80%;
+    height: 80%;
+    background-color: blue;
+}
+
+.fourth {
+    float: right;
+    font-size : 30px;
+    color:red;
+    width: 40%;
+    height: 20%;
+    background-color: #DDDDDD;
+}
+
+.last{
+    float: right;
+    font-size : 30px;
+    color:red;
+    width: 40%;
+    height: 20%;
+    background-color: yellow;
 }

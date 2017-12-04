@@ -142,5 +142,5 @@ os.path.join(PROJECT_DIR, 'templates'),
 )
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'signup'
+LOGIN_REDIRECT_URL = 'stateofplay'
 

@@ -8,6 +8,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from datetime import datetime  
 
 
 class AuthGroup(models.Model):
@@ -144,7 +145,8 @@ class Findout(models.Model):
     userid = models.IntegerField(blank=True, null=True)
     facttype = models.CharField(max_length=255, blank=True, null=True)
     value = models.FloatField(blank=True, null=True)
-    entry_date = models.TextField(blank=True, null=True)  # This field type is a guess.
+    #entry_date = models.TextField(blank=True, null=True)  # This field type is a guess.
+    entry_date=models.DateTimeField(default=datetime.now, blank=True)
     latest_ind = models.IntegerField(blank=True, null=True)
 
     class Meta:

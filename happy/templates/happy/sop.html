@@ -1,0 +1,13 @@
+<html>
+<!DOCTYPE html>
+        {% load static from staticfiles %}
+<head>
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<div class="first">Questions Answered {{data.findcnt}}</div><div class="third">Goals set {{data.goalcnt}}</div>
+<div class="second">Analysis Results {{data.rescnt}}</div><div class="fourth">Goals Complete</div><div class="last">Improvment awards 0</div>
+</div>
+</body>
+</html>

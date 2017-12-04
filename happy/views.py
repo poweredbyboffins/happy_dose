@@ -43,6 +43,16 @@ def simple_chart(request):
 
     return render(request, "happy/sc.html", {"the_script": script, "the_div": div})
 
+@login_required
+def stateofplay(request):
+    """ get data """
+    #select count(*)
+    findcnt=Findout.objects.filter(userid=request.user.id).count()
+    goalcnt=Goals.objects.filter(userid=request.user.id).count()
+    #rescnt=Findout.objects.filter(userid=request.user.id).count()
+    rescnt=1
+    dict={"findcnt":findcnt,"goalcnt":goalcnt,"rescnt":rescnt}
+    return render(request, "happy/sop.html", {'data':dict})
 
 def index(request):
     return render(request, "happy/index.html", )
@@ -69,7 +79,8 @@ def happy(request):
 @login_required
 def assess(request):
     form = Assess(request.POST)
-    uid=""
+    uid=request.user.id
+    print(uid)
     formdata = {}
     if form.is_valid():
        happy = form.cleaned_data.get('happy')
@@ -84,11 +95,11 @@ def assess(request):
                   ,"anx":anx,"anger":anger,"stress":stress
                   ,"tire":tire,"trap":trap} 
        save(formdata,uid) 
-    return render(request, 'happy/joyplot.html')
+    return render(request, 'happy/joy.html')
 @login_required
 def proc(request):
     form = FindOutForm(request.POST)
-    uid=""
+    uid=request.user.id
     formdata = {}
     if form.is_valid():
        #form.save()
@@ -104,7 +115,7 @@ def proc(request):
                   ,"outdoor":outdoor} 
        save(formdata,uid) 
     return render(request, 'happy/happiness.html')
-@login_required    
+
 def save(formdata,uid):
     findout = Findout()
     for key,value in formdata.items():
