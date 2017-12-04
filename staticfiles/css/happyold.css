@@ -1,10 +1,16 @@
 html body {
+/*background-color: yellow;*/
 background: 
-radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
+radial-gradient(circle at 50% 59%, #f45404 3%, #b8ef2b 4%, #b8ef2b 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 50px 0,
+radial-gradient(circle at 50% 41%, #b8ef2b 3%, #f45404 4%, #f45404 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 50px 0,
+radial-gradient(circle at 50% 59%, #f45404 3%, #b8ef2b 4%, #b8ef2b 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 0 50px,
+radial-gradient(circle at 50% 41%, #b8ef2b 3%, #f45404 4%, #f45404 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 0 50px,
+radial-gradient(circle at 100% 50%, #f45404 16%, rgba(210,202,171,0) 17%),
+radial-gradient(circle at 0% 50%, #b8ef2b 16%, rgba(54,78,39,0) 17%),
+radial-gradient(circle at 100% 50%, #f45404 16%, rgba(210,202,171,0) 17%) 50px 50px,
+radial-gradient(circle at 0% 50%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
 background-color:#f4f004;
-background-size:60px 60px;
-height: 100%;
-min-height: 100%;
+background-size:20px 20px;
 }
 h2 {
 font-weight:bold;
@@ -120,61 +126,4 @@ color: blue;
 .col3 {
 background-color: lightblue;
 color: purple;
-}
-
-
-html body .container {
-
-height: 100%; 
-min-height: 100%;
-}
-
-
-.first {
-    float: left;
-    font-size : 30px;
-    color:white;
-    width: 20%;
-    height: 30%;
-    background-color: red;
-}
-
-.second{
-    float: left;
-    font-size : 30px;
-    color:white;
-    width: 20%;
-    height: 70%;
-    background-color: green;
-}
-
-
-.third{
-    float: right;
-    font-size : 30px;
-    color:white;
-    width: 80%;
-    height: 80%;
-    background-color: blue;
-}
-
-.fourth {
-    float: right;
-    font-size : 30px;
-    color:red;
-    width: 40%;
-    height: 20%;
-    background-color: #DDDDDD;
-}
-
-.last{
-    float: right;
-    font-size : 30px;
-    color:red;
-    width: 40%;
-    height: 20%;
-    background-color: yellow;
-}
-.new {
-color:green;
 }
