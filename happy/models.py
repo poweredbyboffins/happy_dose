@@ -167,6 +167,17 @@ class Goals(models.Model):
         db_table = 'goals'
 
 
+class Goal_Types(models.Model):
+    id = models.IntegerField(primary_key=True)
+    goal_name = models.CharField(max_length=255, blank=True, null=True)
+    cat = models.CharField(max_length=255, blank=True, null=True)
+    type = models.CharField(max_length=255, blank=True, null=True)
+    ntrans = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'goal_types'
+
 class SocialAuthAssociation(models.Model):
     id = models.IntegerField(primary_key=True)  # AutoField?
     server_url = models.CharField(max_length=255)

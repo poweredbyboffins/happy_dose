@@ -1,0 +1,14 @@
+<html>
+<!DOCTYPE html>
+        {% load static from staticfiles %}
+<head>
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+</head>
+<body>
+{% for results in data %}
+<h6>{{ results.facttype }}</h6>
+<h6>{{ results.avg }}</h6>
+{%endfor %}
+
+</body>
+</html>

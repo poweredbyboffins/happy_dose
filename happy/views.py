@@ -14,6 +14,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from .forms import *
 from .models import *
+from django.db.models import F, Sum, FloatField, Avg
 import datetime as d
 from bokeh.plotting import figure
 from bokeh.resources import CDN
@@ -21,8 +22,10 @@ from bokeh.embed import components
 from bokeh.io import show, output_file
 from bokeh.models import ColumnDataSource
 from bokeh.palettes import Spectral6
+from bokeh.palettes import Spectral10
 from bokeh.plotting import figure
 from django.contrib.auth import logout
+import random
 
 @login_required
 def simple_chart(request):
@@ -44,6 +47,26 @@ def simple_chart(request):
     return render(request, "happy/sc.html", {"the_script": script, "the_div": div})
 
 @login_required
+def chart(request,xaxis,yaxis,colors):
+
+    data=dict(x=xaxis, y=yaxis, color=colors)
+    source = ColumnDataSource(data)
+    print(data)
+
+    plot=figure(x_range=xaxis, y_range=(0,100), plot_height=350, title="Average Scores",
+           toolbar_location=None, tools="")
+
+    plot.vbar(x='x', top='y', width=0.5, color='color', legend="questions", source=source)
+
+    plot.xgrid.grid_line_color = None
+    #plot.legend.orientation = "vertical"
+    plot.legend.location = "top_center"
+    script, div = components(plot, CDN)
+    return script,div
+
+    #return render(request, "happy/qa2.html", {"the_script": script, "the_div": div})
+
+@login_required
 def stateofplay(request):
     """ get data """
     #select count(*)
@@ -53,6 +76,22 @@ def stateofplay(request):
     rescnt=1
     dict={"findcnt":findcnt,"goalcnt":goalcnt,"rescnt":rescnt}
     return render(request, "happy/sop.html", {'data':dict})
+
+@login_required
+def qa(request):
+    """ get data """
+    #select count(*)
+    findrecs=Findout.objects.filter(userid=request.user.id).values('facttype').annotate(avg=Avg('value'))
+    #dict={"findrecs":findrecs}
+    #return render(request, "happy/qa.html", {'data':findrecs})
+    findlist=list(findrecs)
+    avg=[d['avg'] for d in findlist]
+    facttype=[d['facttype'] for d in findlist]
+    colors = []
+    for i in range(0,15):
+        colors.append(generate_new_color())
+    script,div=chart(request,facttype,avg,colors)
+    return render(request, "happy/qa2.html", {"the_script": script, "the_div": div})
 
 def index(request):
     return render(request, "happy/index.html", )
@@ -127,3 +166,17 @@ def save(formdata,uid):
 def logout_view(request):
     logout(request)
     return render(request, 'happy/logout.html')
+
+def goalresults(request):
+    goalcnt=Goal_Types.objects.all().order_by('ntrans')
+    return render(request, "happy/goals.html", {'data':goalcnt})
+
+def goals(request):
+    goalcnt=Goal_Types.objects.all().order_by('ntrans')
+    return render(request, "happy/goals.html", {'data':goalcnt})
+def r():
+    return random.randint(0,255)
+
+def generate_new_color():
+    color='#'+str(hex(r()))[2:]+str(hex(r()))[2:]+str(hex(r()))[2:]
+    return color

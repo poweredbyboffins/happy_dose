@@ -1,0 +1,61 @@
+<html>
+<!DOCTYPE html>
+        {% load static from staticfiles %}
+<head>
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+<h1> Goals </h1>
+<h4> We Recommend </h4>
+<div class="gfirst">
+<h4>Dopamine</h4>
+<select name="Dopamine">
+{% for goal in data %}
+{% if goal.ntrans == "dopamine" %}
+              <option value={{ goal.goal_name }}>{{goal.goal_name}}<option>
+              <option value={{ goal.cat }}>{{goal.cat}}<option>
+              <option value={{ goal.type }}>{{goal.type}}<option>
+{% endif %}
+{% endfor %}
+</select>
+</div>
+<div class="gsec">
+<h4>Oxytocin</h4>
+<select name="Oxytocin">
+{% for goal in data %}
+{% if goal.ntrans == "oxytocin" %}
+              <option value={{ goal.goal_name }}>{{goal.goal_name}}<option>
+              <option value={{ goal.cat }}>{{goal.cat}}<option>
+              <option value={{ goal.type }}>{{goal.type}}<option>
+{% endif %}
+{% endfor %}
+</select>
+</div>
+<div class="gthird">
+<h4>Serotonin</h4>
+<select name="Serotonin">
+{% for goal in data %}
+{% if goal.ntrans == "serotonin" %}
+              <option value={{ goal.goal_name }}>{{goal.goal_name}}<option>
+              <option value={{ goal.cat }}>{{goal.cat}}<option>
+              <option value={{ goal.type }}>{{goal.type}}<option>
+{% endif %}
+{% endfor %}
+</select>
+</div>
+<div class="gfourth">
+<h4>Endorphin</h4>
+<select name="Endorphin">
+{% for goal in data %}
+{% if goal.ntrans == "endorphin" %}
+              <option value={{ goal.goal_name }}>{{goal.goal_name}}<option>
+              <option value={{ goal.cat }}>{{goal.cat}}<option>
+              <option value={{ goal.type }}>{{goal.type}}<option>
+{% endif %}
+{% endfor %}
+</div>
+
+</div>
+</body>
+</html>
