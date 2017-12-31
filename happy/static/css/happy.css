@@ -183,28 +183,24 @@ color:green;
 
 .gfirst {
     float: left;
-    font-size : 30px;
     color:white;
     width: 25%;
     background-color: red;
 }
 .gsec {
     float: left;
-    font-size : 30px;
     color:white;
     width: 25%;
     background-color: blue;
 }
 .gthird {
     float: left;
-    font-size : 30px;
     color:white;
     width: 25%;
-    background-color: yellow;
+    background-color: orange;
 }
 .gfourth {
     float: left;
-    font-size : 30px;
     color:white;
     width: 25%;
     background-color: green;
