@@ -1,4 +1,3 @@
-insert into goal_types (goal_name,cat,type,ntrans) values ('new things','medium','activity','dopamine');
 insert into goal_types (goal_name,cat,type,ntrans) values ('new experiences','medium','activity','dopamine');
 insert into goal_types (goal_name,cat,type,ntrans) values ('goal oriented chase','hard','activity','dopamine');
 insert into goal_types (goal_name,cat,type,ntrans) values ('list tasks','easy','activity','dopamine');
@@ -11,7 +10,6 @@ insert into goal_types (goal_name,cat,type,ntrans) values ('establish a streak',
 insert into goal_types (goal_name,cat,type,ntrans) values ('natural supplements','medium','diet','dopamine');
 insert into goal_types (goal_name,cat,type,ntrans) values ('create something','medium','diet','dopamine');
 insert into goal_types (goal_name,cat,type,ntrans) values ('meditate','medium','diet','dopamine');
-insert into goal_types (goal_name,cat,type,ntrans) values ('vitamin b6','easy','diet','serotonin');
 
 insert into goal_types (goal_name,cat,type,ntrans) values ('vitamin b6','easy','diet','serotonin');
 insert into goal_types (goal_name,cat,type,ntrans) values ('fermented foods','easy','diet','serotonin');

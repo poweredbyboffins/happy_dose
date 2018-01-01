@@ -1,13 +1,41 @@
-<html>
 <!DOCTYPE html>
+<html>
+
         {% load static from staticfiles %}
 <head>
 <link href="{%static "/css/happy.css" %}" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-<div class="first"><a href="/qa">Questions Answered {{data.findcnt}}</a></div><div class="third"><a href="/g/">Goals set {{data.goalcnt}}</a></div>
-<div class="second">Analysis Results {{data.rescnt}}</div><div class="fourth">Goals Complete</div><div class="last">Improvment awards 0</div>
+<div class="first">
+Questions Answered {{data.findcnt}}
+<br>
+<a href="/qa">Results</a>
+<br>
+<a href="/findout">Questionnaire</a>
+</div>
+<div class="third">
+Goals set {{data.goalcnt}}
+<br>
+<a href="/g/">Set Goals</a>
+<br>
+<a href="/g/">Review Goals</a>
+<br>
+</div>
+<div class="second">
+Analysis Results 
+<br>
+<a href="/qa/">View</a>
+<br>
+</div>
+<div class="fourth">Goals Complete
+<br>
+<a href="/qa/">View</a>
+</div>
+<div class="last">Improvement awards 0
+<br>
+<a href="/qa/">View</a>
+</div>
 </div>
 </body>
 </html>

@@ -17,7 +17,7 @@ text-align : center;
 font-size: 30px;
 color : darkred;
 }
-a { text-decoration:none;}
+a {text-decoration:none;}
 .bigh {
 margin-left:50px;
 color : red;
@@ -122,7 +122,7 @@ color: purple;
 }
 
 
-.container {
+html body .container {
 
 height: 100%; 
 min-height: 100%;
@@ -140,14 +140,9 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     background-color: red;
 }
 
-.first a {color:white;
-    background-color: red;
-    float: left;
-    margin:0;
-    font-size : 20px;
-    }
+a.first {color:white}
 
-.second{
+.second,a{
     float: left;
     font-size : 30px;
     color:white;
@@ -156,12 +151,6 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     background-color: green;
 }
 
-.second a {color:white;
-    background-color: green;
-    float: left;
-    font-size : 20px;
-    margin:0;
-    }
 
 .third{
     float: right;
@@ -172,14 +161,7 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     background-color: blue;
 }
 
-.third a {color:white;
-    background-color: blue;
-    float: left;
-    margin:0;
-    font-size : 20px;
-    }
-
-.fourth {
+.fourth,a {
     float: right;
     font-size : 30px;
     color:red;
@@ -188,27 +170,13 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     background-color: #DDDDDD;
 }
 
-.fourth a {color:white;
-    background-color: #DDDDDD;
-    float: left;
-    margin:0;
-    font-size : 20px;
-}
-
-.last {
+.last,a{
     float: right;
     font-size : 30px;
     color:red;
     width: 30%;
     height: 30%;
     background-color: yellow;
-}
-
-.last a {color:white;
-    background-color: yellow;
-    float: left;
-    margin:0;
-    font-size : 20px;
 }
 .new {
 color:green;

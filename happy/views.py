@@ -26,6 +26,7 @@ from bokeh.palettes import Spectral10
 from bokeh.plotting import figure
 from django.contrib.auth import logout
 import random
+import math
 
 @login_required
 def simple_chart(request):
@@ -61,6 +62,7 @@ def chart(request,xaxis,yaxis,colors):
     plot.xgrid.grid_line_color = None
     #plot.legend.orientation = "vertical"
     plot.legend.location = "top_center"
+    plot.xaxis.major_label_orientation = math.pi/2
     script, div = components(plot, CDN)
     return script,div
 
@@ -117,24 +119,28 @@ def happy(request):
     return render(request, 'happy/happiness.html')
 @login_required
 def assess(request):
-    form = Assess(request.POST)
-    uid=request.user.id
-    print(uid)
-    formdata = {}
-    if form.is_valid():
-       happy = form.cleaned_data.get('happy')
-       dep = form.cleaned_data.get('dep')
-       frust = form.cleaned_data.get('frust')
-       anx = form.cleaned_data.get('anx')
-       anger = form.cleaned_data.get('anger')
-       stress = form.cleaned_data.get('stress')
-       tire = form.cleaned_data.get('tire')
-       trap = form.cleaned_data.get('trap')
-       formdata = {"happy":happy,"dep":dep,"frust":frust
+    if request.method == 'POST':
+        form = Assess(request.POST)
+        uid=request.user.id
+        formdata = {}
+        if form.is_valid():
+           happy = form.cleaned_data.get('happy')
+           dep = form.cleaned_data.get('dep')
+           frust = form.cleaned_data.get('frust')
+           anx = form.cleaned_data.get('anx')
+           anger = form.cleaned_data.get('anger')
+           stress = form.cleaned_data.get('stress')
+           tire = form.cleaned_data.get('tire')
+           trap = form.cleaned_data.get('trap')
+           formdata = {"happy":happy,"dep":dep,"frust":frust
                   ,"anx":anx,"anger":anger,"stress":stress
                   ,"tire":tire,"trap":trap} 
-       save(formdata,uid) 
-    return render(request, 'happy/joy.html')
+           save(formdata,uid) 
+        #return redirect('stateofplay')
+        return HttpResponseRedirect('/accounts/profile')
+    if request.method == 'GET':
+       print("get assess Here why")
+       return redirect('stateofplay')
 @login_required
 def proc(request):
     form = FindOutForm(request.POST)
