@@ -16,14 +16,14 @@ insert into goal_types (goal_name,cat,type,ntrans) values ('fermented foods','ea
 insert into goal_types (goal_name,cat,type,ntrans) values ('massage','easy','activity','serotonin');
 insert into goal_types (goal_name,cat,type,ntrans) values ('walking','easy','activity','serotonin');
 insert into goal_types (goal_name,cat,type,ntrans) values ('exercise','easy','activity','serotonin');
-insert into goal_types (goal_name,cat,type,ntrans) values ('reduce sugar','easy','activity','serotonin');
-insert into goal_types (goal_name,cat,type,ntrans) values ('do not avoid carbs','easy','activity','serotonin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('reduce sugar','easy','diet','serotonin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('do not avoid carbs','easy','diet','serotonin');
 insert into goal_types (goal_name,cat,type,ntrans) values ('natural light','medium','activity','serotonin');
-insert into goal_types (goal_name,cat,type,ntrans) values ('volunteering','hard','activity','serotonin');
-insert into goal_types (goal_name,cat,type,ntrans) values ('study','hard','activity','serotonin');
-insert into goal_types (goal_name,cat,type,ntrans) values ('career improvements','hard','activity','serotonin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('volunteering','hard','social','serotonin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('study','hard','plan','serotonin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('career improvements','plan','activity','serotonin');
 insert into goal_types (goal_name,cat,type,ntrans) values ('exercise','medium','activity','endorphine');
-insert into goal_types (goal_name,cat,type,ntrans) values ('talk to your next door neighbour','medium','activity','oxytocin');
-insert into goal_types (goal_name,cat,type,ntrans) values ('increase your friends on social media','medium','activity','oxytocin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('talk to your next door neighbour','medium','social','oxytocin');
+insert into goal_types (goal_name,cat,type,ntrans) values ('increase your friends on social media','medium','social','oxytocin');
 
 

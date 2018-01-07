@@ -1,8 +1,9 @@
 html, body {
-background: 
-radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
-background-color:#f4f004;
-background-size:60px 60px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow); /* Standard syntax */
 height:100%;
 }
 h2 {
@@ -126,22 +127,25 @@ color: purple;
 
 height: 100%; 
 min-height: 100%;
-radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
 }
 
 
 .first {
-radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     float: left;
     font-size : 30px;
     color:white;
     width: 30%;
     height: 50%;
-    background-color: red;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow); /* Standard syntax */
 }
 
 .first a {color:white;
-    background-color: red;
+    text-decoration: none;
+    background: red; /* For browsers that do not support gradients */
     float: left;
     margin:0;
     font-size : 20px;
@@ -153,14 +157,19 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     color:white;
     width: 30%;
     height: 50%;
-    background-color: green;
+    background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(green, purple); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(green, purple); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(green, purple); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(green, purple); /* Standard syntax */
 }
 
 .second a {color:white;
-    background-color: green;
+    text-decoration: none;
     float: left;
     font-size : 20px;
     margin:0;
+    background: green; /* For browsers that do not support gradients */
     }
 
 .third{
@@ -169,14 +178,18 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     color:white;
     width: 70%;
     height: 70%;
-    background-color: blue;
+    background: indigo; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(indigo, cyan); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(indigo, cyan); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(indigo, cyan); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(indigo,cyan); /* Standard syntax */
 }
 
 .third a {color:white;
-    background-color: blue;
     float: left;
     margin:0;
     font-size : 20px;
+    background: indigo; /* For browsers that do not support gradients */
     }
 
 .fourth {
@@ -185,14 +198,18 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     color:red;
     width: 40%;
     height: 30%;
-    background-color: #DDDDDD;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white,orange); /* Standard syntax */
 }
 
 .fourth a {color:white;
-    background-color: #DDDDDD;
     float: left;
     margin:0;
     font-size : 20px;
+    background: orange; /* For browsers that do not support gradients */
 }
 
 .last {
@@ -201,14 +218,18 @@ radial-gradient(circle at 50% 0%, #b8ef2b 16%, rgba(54,78,39,0) 17%) 50px 50px;
     color:red;
     width: 30%;
     height: 30%;
-    background-color: yellow;
+    background: lime; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lime, fuchsia); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lime,fuchsia); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lime,fuchsia); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lime,fuchsia); /* Standard syntax */
 }
 
 .last a {color:white;
-    background-color: yellow;
     float: left;
     margin:0;
     font-size : 20px;
+    background: lime; /* For browsers that do not support gradients */
 }
 .new {
 color:green;

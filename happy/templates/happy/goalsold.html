@@ -1,0 +1,50 @@
+<html>
+<!DOCTYPE html>
+<!--        {% load static from staticfiles %} -->
+<head>
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+<h1> Goals </h1>
+<h4> We Recommend </h4>
+<div class="gfirst">
+<h4>Dopamine</h4>
+{% for goal in data %}
+{% if goal.ntrans == "dopamine" %}
+              <input type="checkbox" name="{{ goal.goal_name }}" value="{{goal.goal_name}}">{{goal.goal_name}}
+<br>
+{% endif %}
+{% endfor %}
+</div>
+<div class="gsec">
+<h4>Oxytocin</h4>
+{% for goal in data %}
+{% if goal.ntrans == "oxytocin" %}
+              <input type="checkbox" name="{{ goal.goal_name }}" value="{{goal.goal_name}}">{{goal.goal_name}}
+<br>
+{% endif %}
+{% endfor %}
+</div>
+<div class="gthird">
+<h4>Serotonin</h4>
+{% for goal in data %}
+{% if goal.ntrans == "serotonin" %}
+              <input type="checkbox" name="{{ goal.goal_name }}" value="{{goal.goal_name}}">{{goal.goal_name}}
+<br>
+{% endif %}
+{% endfor %}
+</div>
+<div class="gfourth">
+<h4>Endorphin</h4>
+{% for goal in data %}
+{% if goal.ntrans == "endorphin" %}
+              <input type="checkbox" name="{{ goal.goal_name }}" value="{{goal.goal_name}}">{{goal.goal_name}}
+<br>
+{% endif %}
+{% endfor %}
+</div>
+
+</div>
+</body>
+</html>
