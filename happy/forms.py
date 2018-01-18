@@ -19,3 +19,4 @@ class Assess(forms.Form):
     stress=forms.IntegerField()
     tire=forms.IntegerField()
     trap=forms.IntegerField()
+#class Goals(forms.Form):

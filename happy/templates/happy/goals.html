@@ -5,6 +5,8 @@
 <link href="{%static "/css/happy.css" %}" rel="stylesheet">
 </head>
 <body>
+<form method="post" action="/goals/">
+    {% csrf_token %}
 <div class="row">
 <h1> Goals </h1>
 <h4> We Recommend choosing one from each category</h4>
@@ -47,5 +49,8 @@
 </div>
 
 </div>
+<input type="submit" data-inline="true" value="Submit" data-highlight="true" data-theme="e" data-track-theme="c">
+    </form>
+
 </body>
 </html>

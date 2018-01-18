@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'proc/', views.proc, name='proc'),
     url(r'assess/', views.assess, name='assess'),
     url(r'goals/', views.goals, name='goals'),
+    url(r'review/', views.review, name='review'),
     url(r'qa/', views.qa, name='qa'),
     url(r'g/', views.goalresults, name='goalresults'),
     url(r'^joy/$', views.simple_chart, name="simple_chart"),

@@ -1,0 +1,18 @@
+<html>
+<!DOCTYPE html>
+<!--        {% load static from staticfiles %} -->
+<head>
+<link href="{%static "/css/happy.css" %}" rel="stylesheet">
+</head>
+<body>
+<h4>Your Current Goals</h4>
+{% for goal in data %}
+{{goal.goal}}
+<br>
+{% endfor %}
+
+<h5>Please indicate your sucess and enter evidence</h5>
+<h6>location</h6>
+
+</body>
+</html>

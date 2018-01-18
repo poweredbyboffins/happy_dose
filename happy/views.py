@@ -178,11 +178,33 @@ def goalresults(request):
     return render(request, "happy/goals.html", {'data':goalcnt})
 
 def goals(request):
-    goalcnt=Goal_Types.objects.all().order_by('ntrans')
-    return render(request, "happy/goals.html", {'data':goalcnt})
+    if request.method == 'POST':
+        #form = Assess(request.POST)
+        
+        uid=request.user.id
+        formdata = {}
+        #if form.is_valid():
+        savegoals(request.POST,uid) 
+        return HttpResponseRedirect('/accounts/profile')
+    return HttpResponseRedirect('/accounts/profile')
 def r():
     return random.randint(0,255)
 
 def generate_new_color():
     color='#'+str(hex(r()))[2:]+str(hex(r()))[2:]+str(hex(r()))[2:]
     return color
+
+def savegoals(formdata,uid):
+    goals = Goals()
+    Goals.objects.filter(userid=uid).update(latest_ind=0)
+    for key,value in formdata.items():
+        goals.userid=uid
+        goals.goal=value
+        goals.value=1
+        goals.latest_ind=1
+        goals.save()
+def review(request):
+    uid=request.user.id
+    goals=Goals.objects.filter(userid=uid).filter(latest_ind=1)
+    print(goals)
+    return render(request, "happy/review.html", {'data':goals})
