@@ -135,6 +135,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'happy/static'),
 )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    #'django.contrib.staticfiles.finders.AppDirectoriesFinder',    #causes verbose duplicate notifications in django 1.9
+)
 
 PROJECT_DIR=os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = (
