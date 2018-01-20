@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'r!jvo)=1r&^0a^o)zxm!q^4z0wuhk2k-%0%lfpa906=#tk5@=8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['thawing-refuge-24677.herokuapp.com','127.0.0.1']
 

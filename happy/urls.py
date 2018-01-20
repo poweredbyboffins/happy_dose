@@ -39,6 +39,6 @@ urlpatterns = [
     url(r'^oauth/', include('social_django.urls', namespace='social')), 
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^logout/$', views.logout_view, name='logout'),
-    url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
+    #url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
 ]
 
