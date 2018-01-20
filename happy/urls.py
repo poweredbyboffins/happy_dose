@@ -20,6 +20,7 @@ from django.contrib.auth import views as auth_views
 from django.views import static as dv
 from happy import views
 from happy import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -38,6 +39,11 @@ urlpatterns = [
     url(r'^oauth/', include('social_django.urls', namespace='social')), 
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^logout/$', views.logout_view, name='logout'),
-    url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
+#    url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
 ]
+urlpatterns += patterns('', (
+    r'^static/(?P<path>.*)$',
+    'django.views.static.serve',
+    {'document_root': settings.STATIC_ROOT}
+))
 
