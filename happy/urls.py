@@ -23,7 +23,7 @@ from happy import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT})
+    url(r'^static/(?P<path>.*)$', dv.serve, {'document_root': settings.STATIC_ROOT}),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'findout', views.findout, name='findout'),
