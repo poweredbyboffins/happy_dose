@@ -134,7 +134,7 @@ min-height: 100%;
     float: left;
     font-size : 30px;
     color:white;
-    width: 30%;
+    width: 50%;
     height: 50%;
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
@@ -155,7 +155,7 @@ min-height: 100%;
     float: left;
     font-size : 30px;
     color:white;
-    width: 30%;
+    width: 34%;
     height: 50%;
     background: green; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(green, purple); /* For Safari 5.1 to 6.0 */
@@ -176,8 +176,8 @@ min-height: 100%;
     float: right;
     font-size : 30px;
     color:white;
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     background: indigo; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(indigo, cyan); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(indigo, cyan); /* For Opera 11.1 to 12.0 */
@@ -196,8 +196,8 @@ min-height: 100%;
     float: right;
     font-size : 30px;
     color:red;
-    width: 40%;
-    height: 30%;
+    width: 33%;
+    height: 50%;
     background: white; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(white, orange); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, orange); /* For Opera 11.1 to 12.0 */
@@ -216,8 +216,8 @@ min-height: 100%;
     float: right;
     font-size : 30px;
     color:red;
-    width: 30%;
-    height: 30%;
+    width: 33%;
+    height: 50%;
     background: lime; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(lime, fuchsia); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(lime,fuchsia); /* For Opera 11.1 to 12.0 */
