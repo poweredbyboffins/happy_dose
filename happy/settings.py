@@ -25,7 +25,7 @@ SECRET_KEY = 'r!jvo)=1r&^0a^o)zxm!q^4z0wuhk2k-%0%lfpa906=#tk5@=8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thawing-refuge-24677.herokuapp.com','127.0.0.1','happy-dose.com']
+ALLOWED_HOSTS = ['thawing-refuge-24677.herokuapp.com','127.0.0.1','www.happy-dose.com']
 
 
 # Application definition
