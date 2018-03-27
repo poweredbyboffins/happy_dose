@@ -1,0 +1,15 @@
+friends|28.0
+respected|44.0
+outdoor|43.0
+heat|28.0
+newexp|9.0
+exercises|44.0
+family|45.0
+anx|29.0
+tire|36.0
+stress|25.0
+frust|29.0
+trap|30.0
+anger|28.0
+happy|38.0
+dep|30.0
