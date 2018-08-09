@@ -27,6 +27,8 @@ from bokeh.plotting import figure
 from django.contrib.auth import logout
 import random
 import math
+def upd():
+    print('nothing')
 
 @login_required
 def simple_chart(request):
